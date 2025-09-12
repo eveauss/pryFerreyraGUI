@@ -18,15 +18,19 @@ namespace pryFerreyraGUI
         }
 
         //Variables globales
-        string[] Nombres = new string[4];
+        string[] Nombres = new string[8];
         int i = 0;
 
         private void frmBotonera_Load(object sender, EventArgs e)
         {
-            Nombres[0] = "Hoseok";
-            Nombres[1] = "Jimin";
-            Nombres[2] = "Jin";
-            Nombres[3] = "Jungkook";
+            Nombres[0] = "Namjoon";
+            Nombres[1] = "SeokJin";
+            Nombres[2] = "Yoongi";
+            Nombres[3] = "Hoseok";
+            Nombres[4] = "Jimin";
+            Nombres[5] = "Taehyung";
+            Nombres[6] = "Jungkook";
+            Nombres[7] = "BTS!!";
 
             lblDatos.Text = Nombres[0];
 
@@ -41,9 +45,9 @@ namespace pryFerreyraGUI
             }
             else
             {
-                MessageBox.Show("Ya no hay mas nombres");
+                MessageBox.Show("Ya llegaste al límite de nombres");
             }
-            
+
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -53,7 +57,7 @@ namespace pryFerreyraGUI
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
-            
+
 
             if (i > 0)
             {
@@ -64,6 +68,11 @@ namespace pryFerreyraGUI
             {
                 MessageBox.Show("Ya llegaste al primer nombre");
             }
+        }
+
+        private void comboBoxNombres_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

@@ -32,6 +32,7 @@
             btnAdeltante = new Button();
             lblDatos = new Label();
             btnAtras = new Button();
+            comboBoxNombres = new ComboBox();
             gbNombres.SuspendLayout();
             SuspendLayout();
             // 
@@ -82,12 +83,22 @@
             btnAtras.UseVisualStyleBackColor = false;
             btnAtras.Click += btnAtras_Click;
             // 
+            // comboBoxNombres
+            // 
+            comboBoxNombres.FormattingEnabled = true;
+            comboBoxNombres.Location = new Point(73, 12);
+            comboBoxNombres.Name = "comboBoxNombres";
+            comboBoxNombres.Size = new Size(121, 23);
+            comboBoxNombres.TabIndex = 9;
+            comboBoxNombres.SelectedIndexChanged += comboBoxNombres_SelectedIndexChanged;
+            // 
             // frmBotonera
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.OldLace;
             ClientSize = new Size(484, 222);
+            Controls.Add(comboBoxNombres);
             Controls.Add(gbNombres);
             ForeColor = SystemColors.HighlightText;
             Name = "frmBotonera";
@@ -105,5 +116,6 @@
         private Button btnAdeltante;
         private Label lblDatos;
         private Button btnAtras;
+        private ComboBox comboBoxNombres;
     }
 }
