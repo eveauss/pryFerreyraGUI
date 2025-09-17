@@ -36,43 +36,52 @@ namespace pryFerreyraGUI
 
         }
 
-        private void btnAdeltante_Click(object sender, EventArgs e)
+        private void ActualizarBotones()
         {
-            if (i < Nombres.Length - 1)
-            {
-                i++;
-                lblDatos.Text = Nombres[i];
-            }
-            else
-            {
-                MessageBox.Show("Ya llegaste al límite de nombres");
-            }
-
+            btnAdeltante.Enabled = (i < Nombres.Length - 1);
+            btnAtras.Enabled = (i > 0);
+            
         }
+     
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnAtras_Click(object sender, EventArgs e)
+        private void btnPrimero_Click(object sender, EventArgs e)
         {
+            i = 0;
+            lblDatos.Text = Nombres[0];
+            ActualizarBotones();
 
+        }
 
+        private void btnUltimo_Click(object sender, EventArgs e)
+        {
+            i = Nombres.Length - 1;
+            lblDatos.Text = Nombres[Nombres.Length - 1];
+            ActualizarBotones();
+        }
+
+        private void btnAdeltante_Click_1(object sender, EventArgs e)
+        {
+            if (i < Nombres.Length - 1)
+            {
+                i++;
+                lblDatos.Text = Nombres[i];
+                ActualizarBotones();
+            }
+        }
+
+        private void btnAtras_Click_1(object sender, EventArgs e)
+        {
             if (i > 0)
             {
                 i--;
                 lblDatos.Text = Nombres[i];
+                ActualizarBotones();
             }
-            else
-            {
-                MessageBox.Show("Ya llegaste al primer nombre");
-            }
-        }
-
-        private void comboBoxNombres_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
         }
     }
 }

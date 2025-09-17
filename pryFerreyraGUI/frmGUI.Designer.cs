@@ -34,7 +34,7 @@
             // btnBonotera
             // 
             btnBonotera.BackColor = Color.OliveDrab;
-            btnBonotera.ForeColor = SystemColors.Desktop;
+            btnBonotera.ForeColor = SystemColors.ControlLightLight;
             btnBonotera.Location = new Point(12, 12);
             btnBonotera.Name = "btnBonotera";
             btnBonotera.Size = new Size(95, 26);
