@@ -20,7 +20,27 @@ namespace pryFerreyraGUI
         private void btnBonotera_Click(object sender, EventArgs e)
         {
             frmBotonera botonera = new frmBotonera();
-            botonera.ShowDialog();
+            botonera.Nombres[0] = "Feli cumpleanios taiyun";
+            botonera.Show();
+
+            int iNombres = 0;
+            while (iNombres < botonera.Nombres.Length)
+            {
+                lstDatos.Items.Add (botonera.Nombres[iNombres]);
+                iNombres++;
+            }
+
+
+        }
+
+        private void frmGUI_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstDatos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

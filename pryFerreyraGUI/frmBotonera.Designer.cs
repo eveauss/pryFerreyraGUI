@@ -34,7 +34,7 @@
             btnAtras = new Button();
             btnUltimo = new Button();
             btnPrimero = new Button();
-            comboBoxNombres = new ComboBox();
+            cmbNombres = new ComboBox();
             gbNombres.SuspendLayout();
             SuspendLayout();
             // 
@@ -52,6 +52,7 @@
             gbNombres.Size = new Size(421, 129);
             gbNombres.TabIndex = 8;
             gbNombres.TabStop = false;
+            gbNombres.Enter += gbNombres_Enter;
             // 
             // btnAdeltante
             // 
@@ -111,13 +112,13 @@
             btnPrimero.UseVisualStyleBackColor = false;
             btnPrimero.Click += btnPrimero_Click;
             // 
-            // comboBoxNombres
+            // cmbNombres
             // 
-            comboBoxNombres.FormattingEnabled = true;
-            comboBoxNombres.Location = new Point(31, 12);
-            comboBoxNombres.Name = "comboBoxNombres";
-            comboBoxNombres.Size = new Size(121, 23);
-            comboBoxNombres.TabIndex = 9;
+            cmbNombres.FormattingEnabled = true;
+            cmbNombres.Location = new Point(31, 12);
+            cmbNombres.Name = "cmbNombres";
+            cmbNombres.Size = new Size(121, 23);
+            cmbNombres.TabIndex = 9;
             // 
             // frmBotonera
             // 
@@ -125,7 +126,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.OldLace;
             ClientSize = new Size(484, 222);
-            Controls.Add(comboBoxNombres);
+            Controls.Add(cmbNombres);
             Controls.Add(gbNombres);
             ForeColor = SystemColors.HighlightText;
             Name = "frmBotonera";
@@ -140,7 +141,7 @@
         #endregion
 
         private GroupBox gbNombres;
-        private ComboBox comboBoxNombres;
+        private ComboBox cmbNombres;
         private Button btnUltimo;
         private Button btnPrimero;
         private Button btnAdeltante;

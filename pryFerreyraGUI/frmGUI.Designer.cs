@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             btnBonotera = new Button();
+            lstDatos = new ListBox();
             SuspendLayout();
             // 
             // btnBonotera
@@ -43,21 +44,36 @@
             btnBonotera.UseVisualStyleBackColor = false;
             btnBonotera.Click += btnBonotera_Click;
             // 
+            // lstDatos
+            // 
+            lstDatos.BackColor = Color.Snow;
+            lstDatos.BorderStyle = BorderStyle.FixedSingle;
+            lstDatos.FormattingEnabled = true;
+            lstDatos.ItemHeight = 15;
+            lstDatos.Location = new Point(10, 67);
+            lstDatos.Name = "lstDatos";
+            lstDatos.Size = new Size(462, 242);
+            lstDatos.TabIndex = 14;
+            lstDatos.SelectedIndexChanged += lstDatos_SelectedIndexChanged;
+            // 
             // frmGUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.OldLace;
             ClientSize = new Size(484, 461);
+            Controls.Add(lstDatos);
             Controls.Add(btnBonotera);
             Name = "frmGUI";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmGUI";
+            Load += frmGUI_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button btnBonotera;
+        private ListBox lstDatos;
     }
 }

@@ -18,7 +18,7 @@ namespace pryFerreyraGUI
         }
 
         //Variables globales
-        string[] Nombres = new string[8];
+        public string[] Nombres = new string[8];
         int i = 0;
 
         private void frmBotonera_Load(object sender, EventArgs e)
@@ -34,15 +34,22 @@ namespace pryFerreyraGUI
 
             lblDatos.Text = Nombres[0];
 
+            int iCombo = 0;
+            while (i < Nombres.Length)
+            {
+                cmbNombres.Items.Add(Nombres[iCombo]);
+                iCombo++;
+            }
+
         }
 
         private void ActualizarBotones()
         {
             btnAdeltante.Enabled = (i < Nombres.Length - 1);
             btnAtras.Enabled = (i > 0);
-            
+
         }
-     
+
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -82,6 +89,11 @@ namespace pryFerreyraGUI
                 lblDatos.Text = Nombres[i];
                 ActualizarBotones();
             }
+        }
+
+        private void gbNombres_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
